@@ -1,48 +1,90 @@
-header {
-    position: relative;
-    background-color: black;
-    height: 100vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
+body{
+  animation-name: fadein;
+  animation-duration: 500ms;
+}
+header{
+  z-index: 1;
+}
+
+video {
+  position: absolute;
+  width:100%;
+  height:100%;
+  /*  object-fit is not supported on IE  */
+  object-fit: cover;
+}
+
+.fab{
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 25px;
+}
+
+.fa-instagram-square{
+  margin-right: 15px;
+}
+
+.logo{
+  z-index: 1;
+  position: relative;
+  height: 100vh;
+  animation-name: fadein;
+  animation-duration: 9000ms;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
   }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* LOADING */
+.loading{
+  z-index: 1;
+  position: absolute;
+  top: 0;
   
-  header video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+
+  color: white;
+}
+
+
+.loading > img{
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.load{
+  width: 122px;
+  height: 5px;
+  background-color: #000;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.load .load-bar{
+ position: absolute;
+ height: 100%;
+ background-color: #fff;
+ animation: progress-animation 2.5s;
+}
+
+@keyframes progress-animation{
+  0% { width: 0%; }
   
-  header .container {
-    position: relative;
-    z-index: 2;
-  }
+  100% { width: 100%}
   
-  header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 1;
-  }
-  
-  @media (pointer: coarse) and (hover: none) {
-    header {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-    }
-    header video {
-      display: none;
-    }
-  }
+}
+

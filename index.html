@@ -8,24 +8,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/home-video.css">
+    <script src="https://kit.fontawesome.com/fc3a485e87.js" crossorigin="anonymous"></script>
     <title>Lord Bull | Filmes</title>
 </head>
 
 <body>
-    <header>
-        <div class="overlay"></div>
-        <video autoplay muted playsinline loop >
-            <source src="./assets/img/reel-home-1920-mobile.mp4" type="video/mp4">
-        </video>
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
-                    <h1 class="display-3">Video Header</h1>
-                    <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
-                </div>
-            </div>
-        </div>
+    <header class="position-fixed w-100 ">
+        <nav class=" m-auto w-75 navbar navbar-light bg-transparent d-flex flex-row-reverse">
+            <form class="form-inline">
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-vimeo"></i>
+            </form>
+        </nav>
     </header>
+
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="./assets/img/reel-home-1920.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="logo d-flex justify-content-center align-items-center">
+        <img src="./assets/img/logo.png" alt="Logotipo Lord Bulls filmes">
+    </div>
+
+    <div class="loading">
+        <img src="./assets/img/mascote.png" alt="mascote Lord Bull">
+        <div class="load">
+            <div class="load-bar"></div>
+        </div>
+        <p class="percent">carregando</p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -33,7 +45,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-        <script src="./assets/js/autoPlayMobile.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
